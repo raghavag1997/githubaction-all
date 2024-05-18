@@ -12,7 +12,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           cat /etc/os-release
-          echo ${{ env.country_name }}
+          echo ${{ vars.country_name }}
           echo ${{ secrets.my_password }}
   Test:
     environment: QA
@@ -26,4 +26,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           cat /etc/os-release
-          echo ${{ env.country_name }}
+          echo ${{ vars.country_name }}
