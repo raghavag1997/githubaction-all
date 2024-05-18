@@ -2,8 +2,7 @@ name: CI
 on: [ push, workflow_dispatch ]
 jobs:
   build:
-    env: 
-      name: Dev
+    environment: Dev
     runs-on: ubuntu-latest
     steps:
       - name: Step1
@@ -16,8 +15,7 @@ jobs:
           echo ${{ env.country_name }}
           echo ${{ secrets.my_password }}
   Test:
-    env:
-      name: QA
+    environment: QA
     needs: build
     runs-on: ubuntu-latest
     steps:
