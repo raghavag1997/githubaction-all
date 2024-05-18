@@ -15,9 +15,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Step1
+      - name: Step_build
         run: echo Hello, world!
-      - name: Step2
+      - name: Step_build
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
