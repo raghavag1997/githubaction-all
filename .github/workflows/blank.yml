@@ -12,6 +12,7 @@ jobs:
           echo test, and deploy your project.
           cat /etc/os-release
           echo ${{ vars.country_name }}
+          echo ${{ secrets.my_password }}
   Test:
     needs: build
     runs-on: ubuntu-latest
