@@ -4,9 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
+      - name: Step1
         run: echo Hello, world!
-      - name: Run a multi-line script
+      - name: Step2
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
