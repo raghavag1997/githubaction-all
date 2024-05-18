@@ -2,6 +2,8 @@ name: CI
 on: [ push, workflow_dispatch ]
 jobs:
   build:
+    env: 
+      name: Dev
     runs-on: ubuntu-latest
     steps:
       - name: Step1
@@ -14,6 +16,8 @@ jobs:
           echo ${{ vars.country_name }}
           echo ${{ secrets.my_password }}
   Test:
+    env:
+      name: QA
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -24,3 +28,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           cat /etc/os-release
+          echo ${{ vars.country_name }}
