@@ -12,6 +12,7 @@ jobs:
           echo test, and deploy your project.
           cat /etc/os-release
   Test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Step1
